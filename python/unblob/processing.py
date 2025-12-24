@@ -77,8 +77,17 @@ DEFAULT_SKIP_MAGIC = (
     "compiled Java class",
     "magic binary file",
     "python",  #   # (e.g. python 2.7 byte-compiled)
+    
+    "ELF", # 排除elf文件
 )
-DEFAULT_SKIP_EXTENSION = (".rlib",)
+DEFAULT_SKIP_EXTENSION = (
+    ".rlib", 
+
+    ".trt", # 排除模型文件
+    ".engine",
+    ".hbm",
+    ".frcnn",
+)
 
 
 @attrs.define(kw_only=True)

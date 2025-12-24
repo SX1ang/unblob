@@ -19,22 +19,22 @@ from unblob.models import (
 
 C_DEFINITIONS = r"""
     typedef struct erofs_handler{
-        uint32_t magic;
-        uint32_t crc32c;
-        uint32_t feature_compact;
-        uint8_t block_size_bs;
-        uint8_t sb_extslots;
-        uint16_t root_nid;
-        uint64_t inos;
-        uint64_t build_time;
-        uint32_t build_time_nsec;
-        uint32_t block_count;
-        uint32_t meta_blkaddr;
-        uint32_t xattr_blkaddr;
-        uint8_t uuid[16];
-        char volume_name[16];
-        uint32_t feature_incompact;
-        char reserved[44];
+        uint32 magic;
+        uint32 crc32c;
+        uint32 feature_compact;
+        uint8  block_size_bs;
+        uint8  sb_extslots;
+        uint16 root_nid;
+        uint64 inos;
+        uint64 build_time;
+        uint32 build_time_nsec;
+        uint32 block_count;
+        uint32 meta_blkaddr;
+        uint32 xattr_blkaddr;
+        uint8  uuid[16];
+        char   volume_name[16];
+        uint32 feature_incompact;
+        char   reserved[44];
     } erofs_handler_t;
 """
 
